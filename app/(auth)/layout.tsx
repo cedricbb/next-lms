@@ -13,14 +13,18 @@ export default function AuthLayout({children} : {children: ReactNode}) {
                 className: "absolute left-4 top-4"
             })}>
                 <ArrowLeftIcon className="size-4"/>
-                Back
+                Retour
             </Link>
-            <div className="flex w-full max-w-sm flex-col gap">
+            <div className="flex w-full max-w-sm flex-col gap-4">
                 <Link className="flex items-center gap-2 self-center font-medium" href="/" >
                     <Image src={Logo} alt="Logo" width={32} height={32}/>
-                    CedricBLMS.
+                    CedricLMS.
                 </Link>
                 {children}
+                <div className="text-balance text-center text-xs text-muted-foreground">
+                    En cliquant sur continuer, vous acceptez nos <span className="hover:text-primary hover:underline cursor-pointer">Conditions d'utilisation</span>
+                    et notre <span className="hover:text-primary hover:underline cursor-pointer">Politique de confidentialité</span>.
+                </div>
             </div>
         </div>
     )
